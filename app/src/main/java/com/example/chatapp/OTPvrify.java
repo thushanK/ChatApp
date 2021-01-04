@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
@@ -32,6 +33,9 @@ public class OTPvrify extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_o_t_pvrify);
+
+
+
         phonenumber=getIntent().getStringExtra("mobile").toString();
         t2=(EditText)findViewById(R.id.t2);
         b2=(Button)findViewById(R.id.b2);
@@ -103,6 +107,7 @@ public class OTPvrify extends AppCompatActivity {
                     }
                 });
     }
+
 
 
 }

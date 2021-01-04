@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.hbb20.CountryCodePicker;
 
 public class Login extends AppCompatActivity {
@@ -20,6 +22,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        userIsLoggedIn();
 
         t1=(EditText)findViewById(R.id.t1);
         ccp=(CountryCodePicker)findViewById(R.id.ccp);
@@ -34,5 +38,13 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    private void userIsLoggedIn() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
+            return;
+        }
     }
 }
