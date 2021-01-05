@@ -12,6 +12,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.hbb20.CountryCodePicker;
 
+
+
 public class Login extends AppCompatActivity {
 
     CountryCodePicker ccp;
@@ -23,7 +25,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        userIsLoggedIn();
+//        userIsLoggedIn();
 
         t1=(EditText)findViewById(R.id.t1);
         ccp=(CountryCodePicker)findViewById(R.id.ccp);
