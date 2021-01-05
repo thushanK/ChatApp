@@ -12,6 +12,8 @@ import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
 import android.widget.LinearLayout;
 
+import com.example.chatapp.user.UserListAdapter;
+import com.example.chatapp.user.UserObject;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
